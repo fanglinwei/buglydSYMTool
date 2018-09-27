@@ -6,7 +6,7 @@ function printIndroduction {
     echo ""
 }
 
-uploadDsym() {
+function uploadDsym {
     
     files=`find . -name "*.dSYM"`
     for fileName in $files; do				
@@ -16,7 +16,7 @@ uploadDsym() {
         # Appkey 2ffe6156-8b9a-4d2e-81cc-a2c34f894567
         # package com.chongdingdahui.app
         # version(build) 2.2.0(0.4.9)
-        java -jar buglySymboliOS.jar -i "$fileName"  -u -id "$appid" -key "$appkey" -package "$bundleId" -version "$version"
+        # java -jar buglySymboliOS.jar -i "$fileName"  -u -id "$appid" -key "$appkey" -package "$bundleId" -version "$version"
 
     done
 }
@@ -66,5 +66,5 @@ if [ ! -f "$JarPath" ]; then
     exit 2
 fi 
 
-# call the function to extract symbols
+# call the function to extract upload
 uploadDsym $*
