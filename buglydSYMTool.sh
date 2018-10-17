@@ -24,7 +24,7 @@ function uploadDsym {
 # main
 printIndroduction
 
-输入app 信息
+#输入app 信息
 echo -n "enter the App id: "
 read appid 
 
