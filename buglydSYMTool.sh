@@ -11,12 +11,12 @@ function uploadDsym {
     files=`find . -name "*.dSYM"`
     for fileName in $files; do				
 
-		echo "fileName $fileName"
-        # Appid be6f31d4b5
-        # Appkey 2ffe6156-8b9a-4d2e-81cc-a2c34f894567
-        # package com.chongdingdahui.app
+        #        echo "fileName $fileName"
+        # Appid be6f31455
+        # Appkey 2ffe6156-8b9a-4d2e-81bb-a2c34f844589
+        # package com.a aa.app
         # version(build) 2.2.0(0.4.9)
-        # java -jar buglySymboliOS.jar -i "$fileName"  -u -id "$appid" -key "$appkey" -package "$bundleId" -version "$version"
+        java -jar buglySymboliOS.jar -i "$fileName"  -u -id "$appid" -key "$appkey" -package "$bundleId" -version "$version"
 
     done
 }
